@@ -162,5 +162,5 @@ cython_debug/
 # Ignore the dataset directory (images)
 dataset/
 /dataset/
-*.keras
 
+*.keras
