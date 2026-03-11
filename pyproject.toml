@@ -1,12 +1,12 @@
 [project]
 name = "poc-ml-image-detection"
 version = "0.1.0"
-description = "Add your description here"
+description = "A proof-of-concept image classifier for real estate room types using transfer learning with MobileNetV2."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "matplotlib>=3.10.8",
     "numpy>=2.2.6",
     "pillow>=12.1.1",
-    "tensorflow>=2.21.0",
+    "tensorflow[and-cuda]>=2.21.0",
 ]

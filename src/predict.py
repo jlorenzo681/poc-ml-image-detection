@@ -1,3 +1,9 @@
+# Auto-configure GPU libraries from uv/pip before tensorflow is imported
+try:
+    import gpu_setup  # noqa: F401
+except ImportError:
+    pass
+
 import tensorflow as tf
 import numpy as np
 import os

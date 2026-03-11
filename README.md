@@ -10,30 +10,30 @@ It uses **Transfer Learning** with a pre-trained **MobileNetV2** model fine-tune
 *   `src/create_dummy_dataset.py` - Script to generate synthetic sample images to test the model pipeline out of the box.
 *   `src/train.py` - Reads the dataset, loads MobileNetV2, builds the classification head, compiles, and trains the newly structured model.
 *   `src/predict.py` - Sample script that loads the saved `.keras` model and infers the category of a provided test image.
-*   `requirements.txt` - Python dependencies needed for the application.
+*   `pyproject.toml` - Python dependencies and project configuration managed by `uv`.
 
 ## Quick Start
 
 1.  **Install dependencies**:
     ```bash
-    pip install -r requirements.txt
+    uv sync
     ```
 
 2.  **Generate dummy dataset** (so you can test without having real data yet):
     ```bash
-    python src/create_dummy_dataset.py
+    uv run src/create_dummy_dataset.py
     ```
 
 3.  **Train the model**:
     ```bash
-    python src/train.py
+    uv run src/train.py
     ```
 
 4.  **Test the model**:
     ```bash
-    python src/predict.py
+    uv run src/predict.py
     ```
     OR to test a specific image:
     ```bash
-    python src/predict.py /path/to/some/image.jpg
+    uv run src/predict.py /path/to/some/image.jpg
     ```
