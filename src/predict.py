@@ -22,6 +22,9 @@ if len(sys.argv) > 1:
 else:
     # Look for a sample image if not provided
     sample_img = os.path.join(current_dir, "..", "dataset", "bedroom", "bedroom_1.jpg")
+    if not os.path.exists(sample_img):
+        sample_img = os.path.join(current_dir, "..", "dataset_dummy", "bedroom", "bedroom_1.jpg")
+        
     print(f"No image provided. Trying sample image: {sample_img}")
     if os.path.exists(sample_img):
         test_image_path = sample_img

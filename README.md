@@ -6,7 +6,7 @@ It uses **Transfer Learning** with a pre-trained **MobileNetV2** model fine-tune
 
 ## Project Structure
 
-*   `dataset/` - Directory where real-world images are placed, organized by class into subdirectories.
+*   `dataset_dummy/` - Or `dataset/`. Directory where real-world images are placed, organized by class into subdirectories.
 *   `src/create_dummy_dataset.py` - Script to generate synthetic sample images to test the model pipeline out of the box.
 *   `src/train.py` - Reads the dataset, loads MobileNetV2, builds the classification head, compiles, and trains the newly structured model.
 *   `src/predict.py` - Sample script that loads the saved `.keras` model and infers the category of a provided test image.

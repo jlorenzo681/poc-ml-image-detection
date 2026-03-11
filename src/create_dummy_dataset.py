@@ -4,7 +4,7 @@ import random
 
 # Define parameters
 current_dir = os.path.dirname(os.path.abspath(__file__))
-data_dir = os.path.join(current_dir, "..", "dataset")
+data_dir = os.path.join(current_dir, "..", "dataset_dummy")
 classes = ['bedroom', 'bathroom', 'kitchen', 'living_room']
 images_per_class = 20
 img_size = (224, 224)

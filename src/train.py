@@ -12,6 +12,10 @@ img_width = 224
 current_dir = os.path.dirname(os.path.abspath(__file__))
 data_dir = os.path.join(current_dir, "..", "dataset")
 
+# Fallback to dummy dataset if real dataset doesn't exist
+if not os.path.exists(data_dir):
+    data_dir = os.path.join(current_dir, "..", "dataset_dummy")
+
 print(f"Loading data from: {data_dir}")
 
 # 2. Load the training dataset
